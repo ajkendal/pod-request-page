@@ -1,1 +1,84 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap')
+
+$font-stack: 'Chivo', sans-serif
+$dark-background: #121725
+$dark-background-opacity:rgba(18,23,37,.5)
+$main-font-color: #C2CBE5
+$main-header-color: #54E6AF
+$accent-white: #FFFFFF
+$error-text: #FF0000
+$button-color: $main-header-color
+$button-hover-color: #B3FFE2
+$form-background: #2C344B
+$breakpoint-tablet: 769px
+$breakpoint-mobile: 376px
+
+html
+	height: 100vh
+	width: 100vw
+	overflow-y: hidden
+	background: $dark-background
+
+body
+	margin: 0
+	padding: 0
+	overflow-y: auto
+	height: 100vh
+	width: 100vw
+	font: 100% $font-stack
+	background-image: url("assets/desktop/bg-pattern-dots.svg"), url("assets/desktop/image-host.jpg")
+	background-repeat: no-repeat, no-repeat
+	background-position: bottom 10% right, center right
+
+#app-root-id
+	position: absolute
+	bottom: 12%
+	left: 12%
+	background: $dark-background
+	height: 509px
+	width: 723px
+
+#logo
+	position: absolute
+	top: 10%
+	left: 12%
+
+.attribution 
+	position: absolute
+	bottom: 1%
+	right: 1%
+	text-align: right
+	color: white
+
+@media screen and (max-width: $breakpoint-tablet)
+	body
+		background-image: url("assets/desktop/bg-pattern-dots.svg"), url("assets/tablet/image-host_tablet.jpg")
+		background-position: bottom 0 left 5%, top right 0%
+	#app-root-id
+		left: 3%
+		bottom: 25%
+		width: 635
+		height: 509
+	#logo
+		top: 5%
+		left: 2%
+
+@media screen and (max-width: $breakpoint-mobile)
+	html
+		background-image: url("assets/mobile/image-host_mobile.jpg")
+		background-size: cover
+	body
+		background: $dark-background-opacity
+	#logo
+		position: relative
+		width: 30%
+		left: 32%
+		top: 10%
+	#app-root-id
+		background: none
+		width: 327px
+		height: 398px
+		left: 6%
+		top: 12%
+	.attribution
+		font-size: 12px

@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'pod-request-page'`, () => {
+  it(`should have as title 'PodRequest'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('pod-request-page');
+    expect(app.title).toEqual('PodRequest');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('pod-request-page app is running!');
+    expect(compiled.querySelector('#mainHeader').textContent).toContain('Publish your podcasts');
   });
 });
