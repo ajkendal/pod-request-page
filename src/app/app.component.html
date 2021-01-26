@@ -10,10 +10,22 @@
     </p>
   </div>
 
-  <form class="emailForm" formGroup="emailRequest">
-    <input type="email" name="email" ngModel email="true" placeholder="Email address" required/>
-    <button class="button" type="submit">Request access</button>
-    <div class="invalidEmail">Oops! Please check your email</div>
+  <form class="emailForm" name="emailForm" >
+    <input 
+      type="email"
+      email="true"
+      placeholder="Email address" 
+      [formControl]="email"
+      required/>
+  
+    <button 
+      (click)="submitEmail()"
+      class="button"
+      type="button">
+        Request access
+    </button>
+
+    <div id="invalidEmail">Oops! Please check your email</div>
   </form>
 
   <table class="hostedPods">
