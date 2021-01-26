@@ -26,6 +26,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('Publish your podcasts');
+    expect(compiled.querySelector('#mainHeader').textContent).toContain('Publish your podcasts');
   });
 });
