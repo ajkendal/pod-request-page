@@ -1,8 +1,4 @@
-<style>
-  @import "app.component.sass";
-</style>
-
-<div id="app-root-id">
+<div id="app-root-id" role="main">
   <div class="header">
     <h1 id="mainHeader">Publish your podcasts</h1> 
     <h1 id="subHeader">everywhere.</h1>
@@ -17,7 +13,7 @@
   <form class="emailForm" formGroup="emailRequest">
     <input type="email" name="email" ngModel email="true" placeholder="Email address" required/>
     <button class="button" type="submit">Request access</button>
-    <div ngIf="email.invalid" class="invalidEmail">Oops! Please check your email</div>
+    <div class="invalidEmail">Oops! Please check your email</div>
   </form>
 
   <table class="hostedPods">
